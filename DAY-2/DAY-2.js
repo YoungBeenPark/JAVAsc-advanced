@@ -164,7 +164,8 @@ const person3 = {
 person3.greet();
 
 /*
-화살표 함수는 this를 자체적으로 가지지 않고 상위 스코프의 this를 상속받음. 여기서는 전역 객체를 가리키므로 name이 undefined임.
+화살표 함수는 this를 자체적으로 가지지 않고 상위 스코프의 this를 상속받음.
+여기서는 전역 객체를 가리키므로 name이 undefined임.
 */
 
 // 13. setTimeout과 this 바인딩 문제 해결
