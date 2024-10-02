@@ -1,13 +1,19 @@
 // // 문제 1
 // // - 다음 코드의 출력 결과와 이유를 설명하세요.
-// for (let i = 0; i < 3; i++) {
-//   setTimeout(() => console.log(i), 100);
-// }
-// // let은 재할당이 가능하기 때문에 0.1초 후 0,1,2를 출력
-// for (const j = 0; j < 3; j++) {
-//   setTimeout(() => console.log(j), 100);
-// }
-// // const는 재할당이 불가능하고 setTimeout에서 j는 참조할게 없어 Error가 발생
+for (var y = 0; y < 3; y++) {
+  setTimeout(() => console.log(y), 100);
+}
+// var는 함수 스코프로 y변수가 공유됨
+// 3, 3, 3
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 100);
+}
+// let은 블록스코프이며 각 반복에서 새로운 i변수가 생김
+//  0.1초 후 0,1,2를 출력
+for (const j = 0; j < 3; j++) {
+  setTimeout(() => console.log(j), 100);
+}
+// const는 재할당이 불가능하고 setTimeout에서 j는 참조할게 없어 Error가 발생
 
 
 
